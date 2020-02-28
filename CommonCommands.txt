@@ -1,0 +1,2659 @@
+Microsoft Windows [Version 10.0.17763.1039]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Rupesh>g:sd
+
+G:\>cd G:\java-Learning\Maven
+
+G:\java-Learning\Maven>maven
+'maven' is not recognized as an internal or external command,
+operable program or batch file.
+
+G:\java-Learning\Maven>mvn
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.355 s
+[INFO] Finished at: 2020-02-20T15:45:16+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] No goals have been specified for this build. You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoGoalSpecifiedException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.088 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.199 s
+[INFO] Finished at: 2020-02-20T15:45:45+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.126 s
+[INFO] Finished at: 2020-02-20T15:55:50+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec <<< FAILURE!
+greeterSaysNoHello(hello.GreeterTest)  Time elapsed: 0.054 sec  <<< FAILURE!
+java.lang.AssertionError:
+Expected: a string containing "Hello No"
+     but: was "Say Hello World"
+        at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+        at org.junit.Assert.assertThat(Assert.java:956)
+        at org.junit.Assert.assertThat(Assert.java:923)
+        at hello.GreeterTest.greeterSaysNoHello(GreeterTest.java:19)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+        at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+        at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
+
+Results :
+
+Failed tests:   greeterSaysNoHello(hello.GreeterTest): (..)
+
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.345 s
+[INFO] Finished at: 2020-02-20T15:56:02+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project gs-maven: There are test failures.
+[ERROR]
+[ERROR] Please refer to G:\java-Learning\Maven\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.121 s
+[INFO] Finished at: 2020-02-20T17:05:39+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[10,4] cannot find symbol
+  symbol:   class BeforeClass
+  location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[14,4] cannot find symbol
+  symbol:   class Before
+  location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[20,4] cannot find symbol
+  symbol:   class AfterClass
+  location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[25,4] cannot find symbol
+  symbol:   class After
+  location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[18,10] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[23,48] non-static variable counter cannot be referenced from a static context
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[23,8] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[29,10] package Syste does not exist
+[INFO] 8 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.938 s
+[INFO] Finished at: 2020-02-20T17:05:47+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure: Compilation failure:
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[10,4] cannot find symbol
+[ERROR]   symbol:   class BeforeClass
+[ERROR]   location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[14,4] cannot find symbol
+[ERROR]   symbol:   class Before
+[ERROR]   location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[20,4] cannot find symbol
+[ERROR]   symbol:   class AfterClass
+[ERROR]   location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[25,4] cannot find symbol
+[ERROR]   symbol:   class After
+[ERROR]   location: class hello.GreeterTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[18,10] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[23,48] non-static variable counter cannot be referenced from a static context
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[23,8] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[29,10] package Syste does not exist
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[19,10] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[24,48] non-static variable counter cannot be referenced from a static context
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[24,8] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[30,10] package Syste does not exist
+[INFO] 4 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.784 s
+[INFO] Finished at: 2020-02-20T17:09:04+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure: Compilation failure:
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[19,10] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[24,48] non-static variable counter cannot be referenced from a static context
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[24,8] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[30,10] package Syste does not exist
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[20,10] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[25,8] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[31,10] package Syste does not exist
+[INFO] 3 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.861 s
+[INFO] Finished at: 2020-02-20T17:09:58+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure: Compilation failure:
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[20,10] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[25,8] package Syste does not exist
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[31,10] package Syste does not exist
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec <<< FAILURE!
+greeterSaysNoHello(hello.GreeterTest)  Time elapsed: 0.02 sec  <<< FAILURE!
+java.lang.AssertionError:
+Expected: a string containing "Hello No"
+     but: was "Say Hello World"
+        at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+        at org.junit.Assert.assertThat(Assert.java:956)
+        at org.junit.Assert.assertThat(Assert.java:923)
+        at hello.GreeterTest.greeterSaysNoHello(GreeterTest.java:43)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+        at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+        at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
+
+Results :
+
+Failed tests:   greeterSaysNoHello(hello.GreeterTest): (..)
+
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.172 s
+[INFO] Finished at: 2020-02-20T17:10:34+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project gs-maven: There are test failures.
+[ERROR]
+[ERROR] Please refer to G:\java-Learning\Maven\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.102 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.801 s
+[INFO] Finished at: 2020-02-20T17:11:30+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.113 sec <<< FAILURE!
+greeterSaysHello(hello.GreeterTest)  Time elapsed: 0.011 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<hello.Greeter@512ddf17> but was:<hello.Greeter@2c13da15>
+        at org.junit.Assert.fail(Assert.java:88)
+        at org.junit.Assert.failNotEquals(Assert.java:834)
+        at org.junit.Assert.assertEquals(Assert.java:118)
+        at org.junit.Assert.assertEquals(Assert.java:144)
+        at hello.GreeterTest.greeterSaysHello(GreeterTest.java:39)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+        at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+        at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+        at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+        at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+        at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+        at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+        at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+        at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+        at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+        at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+        at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+        at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+        at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+        at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+        at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+        at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
+
+Results :
+
+Failed tests:   greeterSaysHello(hello.GreeterTest): expected:<hello.Greeter@512ddf17> but was:<hello.Greeter@2c13da15>
+
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.188 s
+[INFO] Finished at: 2020-02-20T17:30:16+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project gs-maven: There are test failures.
+[ERROR]
+[ERROR] Please refer to G:\java-Learning\Maven\target\surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.802 s
+[INFO] Finished at: 2020-02-20T17:31:18+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.972 s
+[INFO] Finished at: 2020-02-20T17:32:02+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.035 s
+[INFO] Finished at: 2020-02-20T17:35:02+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.107 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.795 s
+[INFO] Finished at: 2020-02-20T17:35:19+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[42,5] cannot find symbol
+  symbol:   method assertNotEqual(hello.Greeter,hello.Greeter)
+  location: class hello.GreeterTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.895 s
+[INFO] Finished at: 2020-02-20T17:36:10+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure
+[ERROR] /G:/java-Learning/Maven/src/test/java/hello/GreeterTest.java:[42,5] cannot find symbol
+[ERROR]   symbol:   method assertNotEqual(hello.Greeter,hello.Greeter)
+[ERROR]   location: class hello.GreeterTest
+[ERROR]
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.784 s
+[INFO] Finished at: 2020-02-20T17:36:58+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.902 s
+[INFO] Finished at: 2020-02-20T17:37:18+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.848 s
+[INFO] Finished at: 2020-02-20T18:38:24+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.755 s
+[INFO] Finished at: 2020-02-20T18:39:41+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.1 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.121 s
+[INFO] Finished at: 2020-02-20T18:43:42+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.034 s
+[INFO] Finished at: 2020-02-20T19:59:40+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[10,5] illegal start of expression
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.360 s
+[INFO] Finished at: 2020-02-20T19:59:49+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[10,5] illegal start of expression
+[ERROR]
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,11] cannot find symbol
+  symbol:   class FirstDayAtSchool
+  location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,50] cannot find symbol
+  symbol:   class FirstDayAtSchool
+  location: class FirstDay.FirstDayAtSchoolTest
+[INFO] 2 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.948 s
+[INFO] Finished at: 2020-02-20T20:00:34+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure: Compilation failure:
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,11] cannot find symbol
+[ERROR]   symbol:   class FirstDayAtSchool
+[ERROR]   location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,50] cannot find symbol
+[ERROR]   symbol:   class FirstDayAtSchool
+[ERROR]   location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,11] cannot find symbol
+  symbol:   class FirstDayAtSchool
+  location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,50] cannot find symbol
+  symbol:   class FirstDayAtSchool
+  location: class FirstDay.FirstDayAtSchoolTest
+[INFO] 2 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.970 s
+[INFO] Finished at: 2020-02-20T20:01:29+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure: Compilation failure:
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,11] cannot find symbol
+[ERROR]   symbol:   class FirstDayAtSchool
+[ERROR]   location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,50] cannot find symbol
+[ERROR]   symbol:   class FirstDayAtSchool
+[ERROR]   location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.740 s
+[INFO] Finished at: 2020-02-20T20:04:56+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,11] cannot find symbol
+  symbol:   class FirstDayAtSchool
+  location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,51] cannot find symbol
+  symbol:   class FirstDayAtSchool
+  location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[12,23] cannot find symbol
+  symbol:   variable firsdayinSchool
+  location: class FirstDay.FirstDayAtSchoolTest
+[INFO] 3 errors
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.958 s
+[INFO] Finished at: 2020-02-20T20:05:05+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure: Compilation failure:
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,11] cannot find symbol
+[ERROR]   symbol:   class FirstDayAtSchool
+[ERROR]   location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[7,51] cannot find symbol
+[ERROR]   symbol:   class FirstDayAtSchool
+[ERROR]   location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[12,23] cannot find symbol
+[ERROR]   symbol:   variable firsdayinSchool
+[ERROR]   location: class FirstDay.FirstDayAtSchoolTest
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.750 s
+[INFO] Finished at: 2020-02-20T20:06:48+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[12,23] cannot find symbol
+  symbol:   variable firsdayinSchool
+  location: class firstDay.FirstDayAtSchoolTest
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.921 s
+[INFO] Finished at: 2020-02-20T20:06:55+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[12,23] cannot find symbol
+[ERROR]   symbol:   variable firsdayinSchool
+[ERROR]   location: class firstDay.FirstDayAtSchoolTest
+[ERROR]
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR :
+[INFO] -------------------------------------------------------------
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[13,3] missing return statement
+[INFO] 1 error
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.950 s
+[INFO] Finished at: 2020-02-20T20:07:30+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile) on project gs-maven: Compilation failure
+[ERROR] /G:/java-Learning/Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java:[13,3] missing return statement
+[ERROR]
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running firstDay.FirstDayAtSchoolTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.071 sec
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.975 s
+[INFO] Finished at: 2020-02-20T20:08:30+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>cd c:
+C:\Users\Rupesh
+
+G:\java-Learning\Maven>cd..
+
+G:\java-Learning>cd c:
+C:\Users\Rupesh
+
+G:\java-Learning>cd c:
+C:\Users\Rupesh
+
+G:\java-Learning>c:
+
+C:\Users\Rupesh>git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\Rupesh>git config --global user.name "[Lokesh Sinha]"
+
+C:\Users\Rupesh>c:
+
+C:\Users\Rupesh>cd..
+
+C:\Users>cd..
+
+C:\>git config --global user.email "[lokesh.lks100@gmail.com]"
+
+C:\>cd G:\hello-world
+
+C:\>G:\hello-world
+'G:\hello-world' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\>g:
+
+G:\hello-world>echo "adding another test file" >> test.txt
+
+G:\hello-world>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G:\hello-world>git add test.txt
+
+G:\hello-world>git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+G:\hello-world>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test.txt
+
+
+G:\hello-world>git reset head test.txt
+
+G:\hello-world>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G:\hello-world>git coomit -m "test commit"
+git: 'coomit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+G:\hello-world>git commit -m "test commit"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+        test.txt
+
+nothing added to commit but untracked files present
+
+G:\hello-world>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G:\hello-world>git add test.txt
+
+G:\hello-world>git staus
+git: 'staus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+G:\hello-world>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test.txt
+
+
+G:\hello-world>git commit -m "test commit"
+[master 9644e42] test commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+
+G:\hello-world>git remore -v
+git: 'remore' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+
+G:\hello-world>git remote -v
+origin  https://github.com/githublks100/hello-world.git (fetch)
+origin  https://github.com/githublks100/hello-world.git (push)
+
+G:\hello-world>git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 311.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/githublks100/hello-world.git
+   2604dee..9644e42  master -> master
+
+G:\hello-world>git branch development
+
+G:\hello-world>git checkout development
+Switched to branch 'development'
+
+G:\hello-world>echo "My contribution to development branch" >>contribution.txt
+
+G:\hello-world>git branch -a
+* development
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+G:\hello-world>git add contribution.txt
+
+G:\hello-world>git status
+On branch development
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   contribution.txt
+
+
+G:\hello-world>git commit -m "added new file in dev branch"
+[development fe528ba] added new file in dev branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 contribution.txt
+
+G:\hello-world>git status
+On branch development
+nothing to commit, working tree clean
+
+G:\hello-world>git log --online
+fatal: unrecognized argument: --online
+
+G:\hello-world>git log --oneline
+fe528ba (HEAD -> development) added new file in dev branch
+9644e42 (origin/master, origin/HEAD, master) test commit
+2604dee ffff
+85f93df Merge pull request #1 from githublks100/readme-edits
+29c2a29 just for learning
+a3b814d Initial commit
+
+G:\hello-world>git diff master.. development
+diff --git a/contribution.txt b/contribution.txt
+new file mode 100644
+index 0000000..91f446e
+--- /dev/null
++++ b/contribution.txt
+@@ -0,0 +1 @@
++"My contribution to development branch"
+
+G:\hello-world>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+G:\hello-world>git merge development
+Updating 9644e42..fe528ba
+Fast-forward
+ contribution.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 contribution.txt
+
+G:\hello-world>git branch -a
+  development
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+G:\hello-world>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+G:\hello-world>git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 376 bytes | 376.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/githublks100/hello-world.git
+   9644e42..fe528ba  master -> master
+
+G:\hello-world>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+G:\hello-world>git branch refactor
+
+G:\hello-world>git checkout refactor
+Switched to branch 'refactor'
+
+G:\hello-world>git branch -a
+  development
+  master
+* refactor
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+G:\hello-world>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+G:\hello-world>git branch -a
+  development
+* master
+  refactor
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+G:\hello-world>git checkout refactor
+Switched to branch 'refactor'
+M       README.md
+
+G:\hello-world>git diff master..refactor
+
+G:\hello-world>git diff master.. refactor
+
+G:\hello-world>git branch -a
+  development
+  master
+* refactor
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+G:\hello-world>git checkout master
+Switched to branch 'master'
+M       README.md
+Your branch is up to date with 'origin/master'.
+
+G:\hello-world>git checout refactor
+git: 'checout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+G:\hello-world>git checkout master
+Already on 'master'
+M       README.md
+Your branch is up to date with 'origin/master'.
+
+G:\hello-world>git checkout refactor
+Switched to branch 'refactor'
+M       README.md
+
+G:\hello-world>git diff master.. refactor
+
+G:\hello-world>git status
+On branch refactor
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G:\hello-world>git checkout --readme.md
+error: unknown option `readme.md'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --no-guess            do not second guess 'git checkout <no-such-branch>'
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    --overlay             use overlay mode (default)
+
+
+G:\hello-world>git checkout --file readme.md
+error: unknown option `file'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --no-guess            do not second guess 'git checkout <no-such-branch>'
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    --overlay             use overlay mode (default)
+
+
+G:\hello-world>git status refactor
+On branch refactor
+nothing to commit, working tree clean
+
+G:\hello-world>git checkout refactor
+Already on 'refactor'
+M       README.md
+
+G:\hello-world>git status
+On branch refactor
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G:\hello-world>git checkout --readme.md
+error: unknown option `readme.md'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --no-guess            do not second guess 'git checkout <no-such-branch>'
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    --overlay             use overlay mode (default)
+
+
+G:\hello-world>git checkout --file readme.md
+error: unknown option `file'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --no-guess            do not second guess 'git checkout <no-such-branch>'
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    --overlay             use overlay mode (default)
+
+
+G:\hello-world>git status
+On branch refactor
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G:\hello-world>git add readme.md
+
+G:\hello-world>git status
+On branch refactor
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G:\hello-world>git checkout --"ReadMe.md"
+error: unknown option `ReadMe.md'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --no-guess            do not second guess 'git checkout <no-such-branch>'
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    --overlay             use overlay mode (default)
+
+
+G:\hello-world>git add "README.MD"
+
+G:\hello-world>git status
+On branch refactor
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G:\hello-world>git status
+On branch refactor
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+G:\hello-world>git reset --hard
+HEAD is now at fe528ba added new file in dev branch
+
+G:\hello-world>git status
+On branch refactor
+nothing to commit, working tree clean
+
+G:\hello-world>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+G:\hello-world>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+G:\hello-world>git checkout refactor
+Switched to branch 'refactor'
+
+G:\hello-world>git status
+On branch refactor
+nothing to commit, working tree clean
+
+G:\hello-world>git branch -a
+  development
+  master
+* refactor
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+G:\hello-world>cd..
+
+G:\>cd java-Learning
+
+G:\java-Learning>git init
+Initialized empty Git repository in G:/java-Learning/.git/
+
+G:\java-Learning>echo "This is a learning project for intergation of java-maven-git" >>README.md
+
+G:\java-Learning>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Maven/
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G:\java-Learning>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+G:\java-Learning>git add .
+warning: LF will be replaced by CRLF in Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Maven/target/surefire-reports/TEST-firstDay.FirstDayAtSchoolTest.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Maven/target/surefire-reports/TEST-hello.GreeterTest.xml.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Maven/target/surefire-reports/firstDay.FirstDayAtSchoolTest.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Maven/target/surefire-reports/hello.GreeterTest.txt.
+The file will have its original line endings in your working directory
+
+G:\java-Learning>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Maven/pom.xml
+        new file:   Maven/src/main/java/hello/FirstDayAtSchool.java
+        new file:   Maven/src/main/java/hello/Greeter.java
+        new file:   Maven/src/main/java/hello/HelloWorld.java
+        new file:   Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java
+        new file:   Maven/src/test/java/hello/GreeterTest.java
+        new file:   Maven/target/classes/firstDay/FirstDayAtSchool.class
+        new file:   Maven/target/classes/hello/Greeter.class
+        new file:   Maven/target/classes/hello/HelloWorld.class
+        new file:   Maven/target/gs-maven-0.1.0-shaded.jar
+        new file:   Maven/target/gs-maven-0.1.0.jar
+        new file:   Maven/target/maven-archiver/pom.properties
+        new file:   Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+        new file:   Maven/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+        new file:   Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst
+        new file:   Maven/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst
+        new file:   Maven/target/original-gs-maven-0.1.0.jar
+        new file:   Maven/target/surefire-reports/TEST-firstDay.FirstDayAtSchoolTest.xml
+        new file:   Maven/target/surefire-reports/TEST-hello.GreeterTest.xml
+        new file:   Maven/target/surefire-reports/firstDay.FirstDayAtSchoolTest.txt
+        new file:   Maven/target/surefire-reports/hello.GreeterTest.txt
+        new file:   Maven/target/test-classes/firstDay/FirstDayAtSchoolTest.class
+        new file:   Maven/target/test-classes/hello/GreeterTest.class
+        new file:   README.md
+
+
+G:\java-Learning>git reset
+
+G:\java-Learning>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Maven/
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G:\java-Learning>git add Maven\src
+
+G:\java-Learning>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Maven/src/main/java/hello/FirstDayAtSchool.java
+        new file:   Maven/src/main/java/hello/Greeter.java
+        new file:   Maven/src/main/java/hello/HelloWorld.java
+        new file:   Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java
+        new file:   Maven/src/test/java/hello/GreeterTest.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Maven/pom.xml
+        Maven/target/
+        README.md
+
+
+G:\java-Learning>git add "Maven/pom.xml", "README.md"
+fatal: pathspec 'Maven/pom.xml,' did not match any files
+
+G:\java-Learning>git add "Maven/pom.xml"
+
+G:\java-Learning>git add "README.md"
+
+G:\java-Learning>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Maven/pom.xml
+        new file:   Maven/src/main/java/hello/FirstDayAtSchool.java
+        new file:   Maven/src/main/java/hello/Greeter.java
+        new file:   Maven/src/main/java/hello/HelloWorld.java
+        new file:   Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java
+        new file:   Maven/src/test/java/hello/GreeterTest.java
+        new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Maven/target/
+
+
+G:\java-Learning>git remote -v
+
+G:\java-Learning>git remote add origin https://github.com/githublks100/Java-Learning.git
+
+G:\java-Learning>git remote -v
+origin  https://github.com/githublks100/Java-Learning.git (fetch)
+origin  https://github.com/githublks100/Java-Learning.git (push)
+
+G:\java-Learning>git push origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/githublks100/Java-Learning.git'
+
+G:\java-Learning>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Maven/pom.xml
+        new file:   Maven/src/main/java/hello/FirstDayAtSchool.java
+        new file:   Maven/src/main/java/hello/Greeter.java
+        new file:   Maven/src/main/java/hello/HelloWorld.java
+        new file:   Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java
+        new file:   Maven/src/test/java/hello/GreeterTest.java
+        new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Maven/target/
+
+
+G:\java-Learning>git commit -m "Initioal commit"
+[master (root-commit) 19b222b] Initioal commit
+ 7 files changed, 154 insertions(+)
+ create mode 100644 Maven/pom.xml
+ create mode 100644 Maven/src/main/java/hello/FirstDayAtSchool.java
+ create mode 100644 Maven/src/main/java/hello/Greeter.java
+ create mode 100644 Maven/src/main/java/hello/HelloWorld.java
+ create mode 100644 Maven/src/test/java/firstDay/FirstDayAtSchoolTest.java
+ create mode 100644 Maven/src/test/java/hello/GreeterTest.java
+ create mode 100644 README.md
+
+G:\java-Learning>git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Maven/target/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+G:\java-Learning>git push origin master
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (18/18), 2.48 KiB | 424.00 KiB/s, done.
+Total 18 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/githublks100/Java-Learning.git
+ * [new branch]      master -> master
+
+G:\java-Learning>cd C:\Program Files (x86)\Jenkins
+
+G:\java-Learning>
+G:\java-Learning>c:
+
+C:\Program Files (x86)\Jenkins>java -jar jenkins.war
+Running from: C:\Program Files (x86)\Jenkins\jenkins.war
+webroot: $user.home/.jenkins
+2020-02-23 06:16:19.119+0000 [id=1]     INFO    org.eclipse.jetty.util.log.Log#initialized: Logging initialized @3970ms to org.eclipse.jetty.util.log.JavaUtilLog
+2020-02-23 06:16:19.508+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2020-02-23 06:16:40.328+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2020-02-23 06:16:40.540+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-9.4.z-SNAPSHOT; built: 2019-05-02T00:04:53.875Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_171-b11
+2020-02-23 06:16:44.488+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2020-02-23 06:16:45.383+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: DefaultSessionIdManager workerName=node0
+2020-02-23 06:16:45.383+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: No SessionScavenger set, using defaults
+2020-02-23 06:16:45.480+0000 [id=1]     INFO    o.e.j.server.session.HouseKeeper#startScavenging: node0 Scavenging every 600000ms
+2020-02-23 06:16:47.534+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: C:\Users\Rupesh\.jenkins found at: $user.home/.jenkins
+2020-02-23 06:16:49.077+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@e6516e{Jenkins v2.204.2,/,file:///C:/Users/Rupesh/.jenkins/war/,AVAILABLE}{C:\Users\Rupesh\.jenkins\war}
+2020-02-23 06:16:49.540+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStop: Stopped ServerConnector@19932c16{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+2020-02-23 06:16:49.540+0000 [id=1]     INFO    o.e.j.server.session.HouseKeeper#stopScavenging: node0 Stopped scavenging
+2020-02-23 06:16:49.593+0000 [id=1]     INFO    hudson.WebAppMain#contextDestroyed: Shutting down a Jenkins instance that was still starting up
+java.lang.Throwable: reason
+        at hudson.WebAppMain.contextDestroyed(WebAppMain.java:388)
+        at org.eclipse.jetty.server.handler.ContextHandler.callContextDestroyed(ContextHandler.java:965)
+        at org.eclipse.jetty.servlet.ServletContextHandler.callContextDestroyed(ServletContextHandler.java:566)
+        at org.eclipse.jetty.server.handler.ContextHandler.stopContext(ContextHandler.java:942)
+        at org.eclipse.jetty.servlet.ServletContextHandler.stopContext(ServletContextHandler.java:376)
+        at org.eclipse.jetty.webapp.WebAppContext.stopWebapp(WebAppContext.java:1503)
+        at org.eclipse.jetty.webapp.WebAppContext.stopContext(WebAppContext.java:1467)
+        at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:1009)
+        at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:288)
+        at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:569)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+        at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:178)
+        at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:199)
+        at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+        at org.eclipse.jetty.server.Server.doStop(Server.java:464)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+        at winstone.Launcher.shutdown(Launcher.java:313)
+        at winstone.Launcher.<init>(Launcher.java:200)
+        at winstone.Launcher.main(Launcher.java:362)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at Main._main(Main.java:375)
+        at Main.main(Main.java:151)
+2020-02-23 06:16:49.677+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStop: Stopped w.@e6516e{Jenkins v2.204.2,/,null,UNAVAILABLE}{C:\Users\Rupesh\.jenkins\war}
+Exception in thread "Jenkins initialization thread" 2020-02-23 06:16:49.691+0000 [id=1] INFO    winstone.Logger#logInternal: Jetty shutdown successfully
+java.lang.NoClassDefFoundError: hudson/util/HudsonFailedToLoad
+        at hudson.WebAppMain$3.run(WebAppMain.java:247)
+Caused by: java.lang.ClassNotFoundException: hudson.util.HudsonFailedToLoad
+        at java.net.URLClassLoader.findClass(Unknown Source)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        at org.eclipse.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:555)
+        at java.lang.ClassLoader.loadClass(Unknown Source)
+        ... 1 more
+java.io.IOException: Failed to start Jetty
+        at winstone.Launcher.<init>(Launcher.java:189)
+        at winstone.Launcher.main(Launcher.java:362)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at Main._main(Main.java:375)
+        at Main.main(Main.java:151)
+Caused by: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:346)
+        at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:308)
+        at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+        at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:396)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+        at winstone.Launcher.<init>(Launcher.java:187)
+        ... 7 more
+Caused by: java.net.BindException: Address already in use: bind
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Unknown Source)
+        at sun.nio.ch.Net.bind(Unknown Source)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+        at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:342)
+        ... 14 more
+2020-02-23 06:16:49.797+0000 [id=1]     SEVERE  winstone.Logger#logInternal: Container startup failed
+java.net.BindException: Address already in use: bind
+        at sun.nio.ch.Net.bind0(Native Method)
+        at sun.nio.ch.Net.bind(Unknown Source)
+        at sun.nio.ch.Net.bind(Unknown Source)
+        at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+        at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:342)
+Caused: java.io.IOException: Failed to bind to 0.0.0.0/0.0.0.0:8080
+        at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:346)
+        at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:308)
+        at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+        at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:236)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+        at org.eclipse.jetty.server.Server.doStart(Server.java:396)
+        at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+        at winstone.Launcher.<init>(Launcher.java:187)
+Caused: java.io.IOException: Failed to start Jetty
+        at winstone.Launcher.<init>(Launcher.java:189)
+        at winstone.Launcher.main(Launcher.java:362)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+        at java.lang.reflect.Method.invoke(Unknown Source)
+        at Main._main(Main.java:375)
+        at Main.main(Main.java:151)
+
+C:\Program Files (x86)\Jenkins>https://github.com/githublks100/Java-Learning.git
+'https:' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files (x86)\Jenkins>cd g;
+The system cannot find the path specified.
+
+C:\Program Files (x86)\Jenkins>cd g:
+G:\java-Learning
+
+C:\Program Files (x86)\Jenkins>
+C:\Program Files (x86)\Jenkins>g:
+
+G:\java-Learning>maven
+'maven' is not recognized as an internal or external command,
+operable program or batch file.
+
+G:\java-Learning>mvn
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.421 s
+[INFO] Finished at: 2020-02-23T12:04:13+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] No goals have been specified for this build. You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/NoGoalSpecifiedException
+
+G:\java-Learning>mvn clean
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.111 s
+[INFO] Finished at: 2020-02-23T12:04:39+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] The goal you specified requires a project to execute but there is no POM in this directory (G:\java-Learning). Please verify you invoked Maven from the correct directory. -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MissingProjectException
+
+G:\java-Learning>cd maven
+
+G:\java-Learning\Maven>mvn clean
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom (3.9 kB at 2.8 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.jar
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.jar (25 kB at 71 kB/s)
+[INFO]
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ gs-maven ---
+[INFO] Deleting G:\java-Learning\Maven\target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.462 s
+[INFO] Finished at: 2020-02-23T12:06:08+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn build
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.124 s
+[INFO] Finished at: 2020-02-23T12:06:22+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Unknown lifecycle phase "build". You must specify a valid lifecycle phase or a goal in the format <plugin-prefix>:<goal> or <plugin-group-id>:<plugin-artifact-id>[:<plugin-version>]:<goal>. Available lifecycle phases are: validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy, pre-clean, clean, post-clean, pre-site, site, post-site, site-deploy. -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/LifecyclePhaseNotFoundException
+
+G:\java-Learning\Maven>mvn compile
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.581 s
+[INFO] Finished at: 2020-02-23T12:06:54+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn test
+[INFO] Scanning for projects...
+[INFO]
+[INFO] --------------------< org.springframework:gs-maven >--------------------
+[INFO] Building gs-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\main\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to G:\java-Learning\Maven\target\classes
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ gs-maven ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory G:\java-Learning\Maven\src\test\resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ gs-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to G:\java-Learning\Maven\target\test-classes
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ gs-maven ---
+[INFO] Surefire report directory: G:\java-Learning\Maven\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running firstDay.FirstDayAtSchoolTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec
+Running hello.GreeterTest
+@BeforeClass: onceExecutedBeforeAll
+@Before: executedBeforeEach
+Counter value :1
+@After: executedAfterEach
+Counter value :2
+@Before: executedBeforeEach
+Counter value :3
+@After: executedAfterEach
+Counter value :4
+@AfterClass: onceExecutedAfterAll
+Executed as many as :4
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 sec
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.742 s
+[INFO] Finished at: 2020-02-23T12:07:09+05:30
+[INFO] ------------------------------------------------------------------------
+
+G:\java-Learning\Maven>mvn --version
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+Maven home: C:\wso2\apache-maven-3.6.3\bin\..
+Java version: 1.8.0_171, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk1.8.0_171\jre
+Default locale: en_IN, platform encoding: Cp1252
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+
+G:\java-Learning\Maven>
+just a test command
