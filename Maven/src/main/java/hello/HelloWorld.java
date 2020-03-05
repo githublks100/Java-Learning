@@ -4,9 +4,11 @@ public class HelloWorld
 {
   public static void main(String[] args)
   {
-    Greeter greeter = new Greeter();
+	  
+	 // added some comments
+    Greeter greeter1 = new Greeter();
     LocalTime currentTime = new LocalTime();
     System.out.println("the current local time is:" + currentTime);
-    System.out.println(greeter.sayHello());
+    System.out.println(greeter1.sayHello());
   }
 }
